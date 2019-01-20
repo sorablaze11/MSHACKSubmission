@@ -1,19 +1,59 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 			<link rel="shortcut icon" type="image/png" href="https://img.icons8.com/dusk/64/000000/place-marker.png"/>
 	</head>
-    <div style="text-align:center">
-	    <h1>Dr. Phil</h1>
-    </div>
-    <body>
-        <div style="text-align:center">
-    		<a href="{{ url_for('personal_info') }}"><button align="center" type="button" class="btn btn-primary">Personal Info</button></a>
-    		<a href="{{ url_for('rating') }}"><button type="button" class="btn btn-primary">Rating</button></a>
-    		<a href="{{ url_for('map_visualise') }}"><button type="button" class="btn btn-primary">Maps Visualisation</button></a>
-        </div>
+    <body background="{{ url_for('static', filename='images/background.png') }}">
+    <h1 align="left" style="font-family: 'Roboto';">Dr. Phil</h1></span>
+    <a href="{{ url_for('personal_info') }}"><button align="center" type="button" class="btn btn-primary">Personal Info</button></a>
+    <span style="display:inline-block; width: 10px;"></span>
+    <a href="{{ url_for('rating') }}"><button type="button" class="btn btn-primary">Rating</button></a>
+    <span style="display:inline-block; width: 10px;"></span>
+    <a href="{{ url_for('map_visualise') }}"><button type="button" class="btn btn-primary">Maps Visualisation</button></a>
+    <hr style="height:1px;border:none;color:#333;background-color:#333;" />
+    <h3 style="font-family: 'Mono';">Dr. Phil is a web application that determines current locations and services based on community health infrastructure facets of health, fitness, and nutrition. Individual (patient specific) address can be input into the application and surrounding health infrastructures—health clinics, supermarkets, fitness centers, and other services—can be visualized.</h3>
+    <br>
+    <h2 style="font-family: 'Roboto';">Inspiration</h2>
+    <hr style="height:1px;border:none;color:#333;background-color:#333;" />
+    <h3 style="font-family: 'Mono';">Despite the countless methods to address health, fitness, and nutrition needs within the community, in order to optimize implementation and development of health infrastructure, it is paramount to understand current and local community needs. Working with available and accessible tools—MapmyIndia—we can evaluate to current locations and services to address this health related issue.</h3>
+    <h2 style="font-family: 'Roboto';">Features</h2>
+    <hr style="height:1px;border:none;color:#333;background-color:#333;" />
+    <ul>
+        <li><h3 style="font-family: 'Mono';">Visualisation and Insights for current/selected locations.</h3></li>
+        <li><h3 style="font-family: 'Mono';">Crowd-source ratings for nearby health infrastructure.</h3></li>
+        <li><h3 style="font-family: 'Mono';">SOS Features for Emergencies.</h3></li>
+    </ul>
+    <style>
+        .float{
+        position:fixed;
+        width:60px;
+        height:60px;
+        bottom:40px;
+        right:40px;
+        background-color:#FF0000;
+        color:#FF0000;
+        border-radius:50px;
+        text-align:center;
+        box-shadow: 2px 2px 3px #999;
+        }
+
+        .my-float{
+        margin-top:22px;
+        }
+    </style>
+    <a href="{{ url_for('sos') }}" class="float">
+        <i class="fa fa-plus my-float">SOS</i>
+    </a>
     </body>
 </html>
