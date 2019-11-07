@@ -1,2 +1,6 @@
 ipinfo
 polyline
+flask
+numpy
+mpld3
+matplotlib
